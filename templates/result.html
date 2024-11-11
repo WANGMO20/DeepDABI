@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniTech - Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+    <div class="container4">
+        <h1>AniTech</h1>
+        <div class="result-container">
+            <!-- Display the detected breed image -->
+            <img src="{{ url_for('static', filename=image_path) }}" alt="Pet" class="preview-image">
+            <h2>{{ breed }}</h2>
+            <!-- Button to upload another image -->
+            <a href="{{ url_for('upload') }}" class="btn">Upload Another Image</a>
+            <!-- Home button, styled and positioned in the bottom-right corner -->
+            <a href="{{ url_for('index') }}" class="btn home-btn">Home </a>
+        </div>
+    </div>
+</body>
+</html>

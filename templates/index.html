@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniTech - Pet Breed Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Logo or Heading with styled text -->
+        <h1><span style="color: #28a745;">Ani</span>Tech</h1>
+        
+        <!-- Introductory Text -->
+        <p class="intro-text">
+            Introducing the <strong>future</strong> of domestic animal care with <strong>AI-powered breed detection!</strong> 
+            Instantly <strong>uncover</strong> the lineage of your furry friends with <strong>pinpoint accuracy</strong>. 
+            From identifying rare breeds to understanding your pet's unique characteristics, our cutting-edge technology 
+            delivers <strong>fast and reliable results</strong>. Whether for owners, vets, or breeders, breed detection 
+            helps you tailor care to every pet's needs. Discover their story with just a click—because every fur baby 
+            deserves to be understood!
+        </p>
+        
+        <!-- Detect Breed Button -->
+        <a href="{{ url_for('upload') }}" class="btn">Detect Breed</a>
+    </div>
+
+    
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='scr/script.js') }}">
+    
+</body>
+</html>

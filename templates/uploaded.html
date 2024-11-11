@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniTech - Check Breed</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/uploaded.css') }}">
+</head>
+<body>
+    <div class="container3">
+        <h1>AniTech</h1>
+        <div class="preview-container">
+            <!-- Display the uploaded image preview -->
+            <img src="{{ url_for('static', filename=image_path) }}" alt="Uploaded pet" class="preview-image">
+            <form action="{{ url_for('detect_breed') }}" method="post">
+                <input type="hidden" name="image_path" value="{{ image_path }}">
+                <button type="submit" class="btn">Check Breed</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

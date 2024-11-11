@@ -1,0 +1,245 @@
+/* Reset some default browser styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../img/bG1.png"); /* Adjusted path */
+  background-size: cover;
+  background-position: top;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #d5d5d52c;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #28a745; /* Green color for "Ani" */
+  font-weight: bold;
+}
+
+h1 span {
+  color: #008616; /* Black color for "Tech" */
+}
+
+.intro-text {
+  margin: 20px 0;
+  color: #333;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.intro-text strong {
+  color: #00821e; /* Highlighted green text */
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  color: white;
+  background-color: #28a745; /* Green background color */
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer; /* Add cursor to make it look clickable */
+}
+
+.btn:hover {
+  background-color: #218838; /* Darker green for hover effect */
+}
+
+
+
+
+
+
+.container1{
+  height: 1vh;
+ width: 100vw;
+ max-height: 800px;
+ max-width: 1280px;
+ min-height: 400px;
+ min-width: 1000px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ margin: 0 auto;
+ }
+ 
+
+.border{
+  height: 369px;
+  width: 290px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+ 
+
+ .border:hover{
+  border: 1px solid white;
+ }
+   
+
+.card{ 
+  height: 379px;
+  width: 300px;
+  background: grey;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: black;
+  box-shadow: 0 70px 63px -60px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+ }
+ h2{
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ color: white;
+ margin: 20px;
+ opacity: 0;
+ transition: opacity 1s;
+}
+
+ .card a{
+  opacity: 0;
+  transition: opacity 1s;
+  color: #fff;
+ 
+}
+ 
+.icons{
+  position: absolute;
+ fill: #fff;
+ color: #fff;
+ height: 130px;
+ top: 226px;
+ width: 50px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-around;
+}
+ 
+
+.card0{
+  background: url('tnd.jpg') center center no-repeat;
+ background-size: 300px;
+}
+
+
+ .card0:hover{
+  background: url('tnd.jpg') left center no-repeat;
+   background-size: 600px;
+   h2{
+    opacity: 1;
+   }
+     
+
+   a{
+    opacity: 1;
+   } 
+   a:hover{
+    color: grey;
+   }
+ }
+   
+
+ 
+     
+
+.card1{
+  background: url('sy.jpg') center center no-repeat;
+ background-size: 300px;
+
+}
+
+ .card1:hover{
+  background: url('sy.jpg') left center no-repeat;
+   background-size: 600px;
+   h2{
+    opacity: 1;
+   }
+     
+
+   a{
+    opacity: 1;
+   } 
+   a:hover{
+    color: grey;
+   }
+ }
+ 
+
+ .card2{
+  background: url('tw.jpg') center center no-repeat;
+ background-size: 300px;
+
+}
+
+ .card2:hover{
+  background: url('tw.jpg') left center no-repeat;
+   background-size: 600px;
+   h2{
+    opacity: 1;
+   }
+     
+
+   a{
+    opacity: 1;
+   } 
+   a:hover{
+    color: grey;
+   }
+ }
+ 
+     
+
+.card3{
+  background: url('sw.jpg') center center no-repeat;
+  background-size: 300px;
+ 
+}
+
+ .card3:hover{
+  background: url('sw.jpg') left center no-repeat;
+  background-size: 600px;
+  h2{
+    opacity: 1;
+   }
+     
+
+   a{
+    opacity: 1;
+   }
+   a:hover{
+    color: grey;
+   } 
+ }
+
+
+
+

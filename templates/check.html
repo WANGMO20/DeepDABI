@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Breed - AniTech</title>
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg.png'); /* Update path as needed */
+    background-repeat: no-repeat; /* Prevents repeating of the background */
+    background-position: center center; /* Centers the image */
+    background-size: cover; /* Ensures the background covers the entire viewport */
+    background-attachment: fixed; /* Keeps the image in place even when scrolling */
+    height: 100vh; /* Ensures the background applies to the full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header and navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 2px solid #f4f4f4;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: green;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: green;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content styles */
+        .content {
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .pets-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        h1 span {
+            color: green;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: darkgreen;
+        }
+
+        /* Side text box */
+        .info-box {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: green;
+            padding: 30px;
+            border-radius: 10px 0 0 10px;
+            color: white;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .info-box p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">AniTech</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Algorithms</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <h1>Check the Breed</h1>
+            <img src="data:image/jpeg;base64,{{ image_data }}" class="hero-image" alt="Uploaded Image">
+            <form action="/predict" method="POST">
+                <button type="submit" class="button">Check Breed</button>
+            </form>
+
+            <div class="info-box">
+                <p>Click on the "Check Breed" button to let our AI recognize the animal's breed.</p>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+        // Function to get the uploaded image from the previous page
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const imageUrl = params.get('image');
+            const uploadedImage = document.getElementById('uploadedImage');
+            
+            if (imageUrl) {
+                uploadedImage.src = imageUrl;
+            }
+        };
+    </script>
+</body>
+</html>

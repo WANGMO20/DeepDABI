@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniTech - Upload Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+    <script>
+        // Validate file type and update label
+        function handleFileSelect(event) {
+            const fileInput = event.target;
+            const filePath = fileInput.value;
+            const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+            if (!allowedExtensions.exec(filePath)) {
+                alert('Please upload a valid image file (jpg, jpeg, png, gif).');
+                fileInput.value = ''; // Reset the input
+                updateLabel(false);
+                return;
+            }
+            updateLabel(true);
+        }
+
+        // Update the label based on whether a file is selected
+        function updateLabel(isFileSelected) {
+            const label = document.querySelector('label[for="file"]');
+            label.textContent = isFileSelected ? "File Selected" : "Choose an Image";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">AniTech</h1>
+        <div class="upload-section">
+            <form action="{{ url_for('uploaded') }}" method="post" enctype="multipart/form-data" onsubmit="return handleFileSelect(event)">
+                <div class="upload-box">
+                    <input type="file" name="file" id="file" accept="image/*" required onchange="handleFileSelect(event)">
+                    <label for="file" style="text-decoration: underline;">Click here to select an Image</label>
+
+                </div>
+                <button type="submit" class="btn">Upload</button>
+                <div class="error-message">
+                    {% if error %}
+                        <p>{{ error }}</p>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
